@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Brasserie.View.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key= "TestButton" TargetType ="Button">
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="BackgroundColor" Value="Grey"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="5">
+
+            <Label
+                x:Name="lblDebug"
+                Text="debug Text"
+                                    />
+
+            <Button
+                x:Name="buttonTestCreateFirstPersons"
+                Text=" Créer mes premières personnes"
+                Clicked="buttonTestCreateFirstPersons_Clicked"
+                Style="{StaticResource TestButton}"
+                />
+            
+
+            <Button
+               x:Name="buttonTestEncapsulation"
+               Text="Test encapsulation , accesseurs "
+               Clicked="buttonTestEncapsulation_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+            <Button
+               x:Name="buttonTestStatic"
+               Text="Tester Static "
+               Clicked ="buttonTestStatic_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+            <Button
+               x:Name="buttonTestCreateItem"
+               Text="Tester CreateItem "
+               Clicked ="buttonTestCreateItem_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+
+            <Button
+                x:Name="ButtonTestCateringClasses"
+                Text="Tester CateringClasses"
+                Clicked="ButtonTestCateringClasses_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+            <Button
+                x:Name="ButtonTestCollection"
+                Text="Tester Collection"
+                Clicked="ButtonTestCollection_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+
+            <Image
+                Source="brewery.png"
+                HeightRequest="250"
+                Aspect="AspectFit"
+                SemanticProperties.Description="a brewery" />
+
+            <Label
+                Text="Bienvenue à la Brasserie INF A 2023"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Welcome to Our Brewery Project ! "
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+            <Entry x:Name="EntryCount" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
